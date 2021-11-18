@@ -1,1 +1,1 @@
-# Star Wars React API lab# react-swapi
+# Star Wars React API lab
