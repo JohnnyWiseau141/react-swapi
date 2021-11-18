@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router";
+import { useLocation, Link } from "react-router-dom";
 import { getShipDetails } from "./services/sw-api";
 
 const StarshipDetails = (props) => {
-  const [starshipDetails, setStarshipDetails] = useState({})
+  // const [starshipDetails, setStarshipDetails] = useState({})
 
   let location = useLocation()
-
-  useEffect(() => {
-    getShipDetails(location.pathname)
-    .then(shipDetailsFromApi => setStarshipDetails
-      (shipDetailsFromApi))
-    console.log(location.pathname)
-  }, [] )
+  console.log(location)
+  const starship = location.state.starship
+  // useEffect(() => {
+  //   getShipDetails(location.state)
+  //   .then(shipDetailsFromApi => setStarshipDetails
+  //     (shipDetailsFromApi))
+  // }, [] )
 
   return ( 
     <div>
       <h2>NAME:</h2>
-      <div>{starshipDetails.name}</div>
-      <div>{starshipDetails.model}</div>
+      <div>{starship.name}</div>
+      <div>{starship.model}</div>
     </div>
   );
 }

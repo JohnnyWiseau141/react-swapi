@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {Routes, Route} from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar';
 import Starships from './Starships';
-import StarshipDetails from './StarshipDetails';
+import StarshipDetails from './StarshipDetails.jsx';
 import './App.css';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
     <NavBar navItems={navItems} />
     <Routes>
       <Route path="/" element={<Starships/>}/>
-      <Route path="/starships/:id" element={<StarshipDetails/>}/>
+      <Route path="/starships/:id/" element={<StarshipDetails/>}/>
     </Routes>
     </>
   );
