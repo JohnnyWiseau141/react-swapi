@@ -13,12 +13,9 @@ function App() {
     <>
     <NavBar navItems={navItems} />
     <Routes>
-      <Route path="/"/>
+      <Route path="/" element={<Starships/>}/>
       <Route path="/starships/:id" element={<StarshipDetails/>}/>
     </Routes>
-    <div>
-      <Starships />
-    </div>
     </>
   );
 }
