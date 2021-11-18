@@ -19,6 +19,11 @@ const StarshipDetails = (props) => {
       <h2>NAME:</h2>
       <div>{starship.name}</div>
       <div>{starship.model}</div>
+
+    <Link to="/">
+    Return to Main page
+    </Link>
+
     </div>
   );
 }
