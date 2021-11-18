@@ -2,19 +2,23 @@ import React, { useState } from 'react';
 import {Routes, Route} from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar';
 import Starships from './Starships';
+import StarshipDetails from './StarshipDetails';
 import './App.css';
 
 function App() {
   const [navItems, setNavItems] = useState([
-    {url: "/starships/", name: "Star Wars Starships"}
+    {url: "/", name: "Star Wars Starships"}
   ])
   return (
     <>
     <NavBar navItems={navItems} />
     <Routes>
-      <Route path="/starships" element={<Starships/>}/>
+      <Route path="/"/>
+      <Route path="/starships/:id" element={<StarshipDetails/>}/>
     </Routes>
-    <p>Star wars spaceships will go here</p>
+    <div>
+      <Starships />
+    </div>
     </>
   );
 }
