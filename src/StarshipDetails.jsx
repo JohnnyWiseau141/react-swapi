@@ -8,15 +8,17 @@ const StarshipDetails = (props) => {
   let location = useLocation()
 
   useEffect(() => {
-    getShipDetails(location.state.shipTitle.url)
+    getShipDetails(location.pathname)
     .then(shipDetailsFromApi => setStarshipDetails
       (shipDetailsFromApi))
+    console.log(location.pathname)
   }, [] )
 
   return ( 
     <div>
       <h2>NAME:</h2>
       <div>{starshipDetails.name}</div>
+      <div>{starshipDetails.model}</div>
     </div>
   );
 }
