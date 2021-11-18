@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { getAllStarships  } from './services/sw-api';
 import { Link } from 'react-router-dom'
+import './Starships.css'
 
 
 const Starships = (props) => {
